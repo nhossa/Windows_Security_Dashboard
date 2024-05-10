@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Security Checklist Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Security Checklist Report</h2>
+        <form method="post">
+            <button type="submit" class="btn btn-primary mb-3">Run Security Checks</button>
+        </form>
+        <ul class="list-group mt-3">
+            {% for line in report_lines %}
+            <li class="list-group-item">{{ line }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>
